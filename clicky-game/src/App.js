@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Header from "./components/Header.js";
 import Instructions from "./components/Instructions.js";
-// import MainContent from "./components/MainContent.js";
+import MainContent from "./components/MainContent.js";
 import Footer from "./components/Footer.js";
 
 
@@ -11,7 +11,7 @@ class App extends Component {
       <div>
         <Header/>
         <Instructions/>
-        {/* <MainContent/> */}
+        <MainContent/>
         <Footer/>
       </div>
     );
