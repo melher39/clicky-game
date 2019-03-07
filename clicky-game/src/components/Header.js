@@ -1,7 +1,7 @@
 import React from "react";
 
-function Header(){
-    return(
+function Header() {
+    return (
         // basic navbar to be used as header
         <nav>
             <div className="nav-wrapper container">
