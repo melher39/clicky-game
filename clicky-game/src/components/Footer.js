@@ -8,7 +8,7 @@ function Footer() {
             </div>
             <div className="footer-copyright">
                 <div className="container white-text">
-                    ©2019 Melvin Hernandez <a class="white-text" href="https://github.com/melher39/clicky-game" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
+                    ©2019 Melvin Hernandez <a className="white-text" href="https://github.com/melher39/clicky-game" target="_blank" rel="noopener noreferrer">GitHub Repo</a>
                 </div>
             </div>
         </footer>
