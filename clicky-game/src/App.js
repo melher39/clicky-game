@@ -16,6 +16,8 @@ class App extends Component {
     highScore: 0
   };
 
+
+
   handleOnClick = id => {
     this.increaseScore();
     this.increaseHighScore();
@@ -23,6 +25,7 @@ class App extends Component {
       const updatedImageData = prevState.imageData.map(photo => {
         if (photo.id === id) {
           photo.clicked = true;
+
           console.log(photo);
         }
         return photo;
@@ -33,9 +36,9 @@ class App extends Component {
         imageData: updatedImageData
 
       }
-    })
+    });
 
-  };
+  }
 
   increaseScore = () => {
     this.setState({
@@ -49,6 +52,24 @@ class App extends Component {
     });
   }
 
+  resetGame = () => {
+    this.setState(prevState => {
+      const updatedImageData = prevState.imageData.map(photo => {
+        // if (photo.id === id) {
+          photo.clicked = false;
+
+          // console.log(photo);
+        // }
+        return photo;
+
+      });
+
+      return {
+        imageData: updatedImageData, 
+        score: 0
+      }
+    });
+  }
 
   render() {
 
@@ -56,7 +77,8 @@ class App extends Component {
       <ArtistImage
         photo={image}
         key={image.id}
-        onClick={this.handleOnClick}
+        // quick ternay expression to see if photo is clicked already
+        onClick={image.clicked ? this.resetGame : this.handleOnClick}
       />
     )
 

@@ -11,7 +11,6 @@ function Header(props) {
             </div>
         </nav>
     );
-
 }
 
 export default Header;
