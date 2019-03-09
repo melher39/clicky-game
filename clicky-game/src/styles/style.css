@@ -1,5 +1,11 @@
+/* images are resposnive */
 img {
     max-width: 100%;
     height: 200px;
     margin-bottom: 5%;
+}
+
+/* navbar background color */
+nav {
+    background-color: #d32f2f   ;
 }
