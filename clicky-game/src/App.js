@@ -47,25 +47,27 @@ class App extends Component {
   }
 
   increaseHighScore = () => {
-    this.setState({
-      highScore: this.state.highScore + 1
-    });
+    if (this.state.highScore < 12) {
+      this.setState({
+        highScore: this.state.highScore + 1
+      });
+    }
   }
 
   resetGame = () => {
     this.setState(prevState => {
       const updatedImageData = prevState.imageData.map(photo => {
         // if (photo.id === id) {
-          photo.clicked = false;
+        photo.clicked = false;
 
-          // console.log(photo);
+        // console.log(photo);
         // }
         return photo;
 
       });
 
       return {
-        imageData: updatedImageData, 
+        imageData: updatedImageData,
         score: 0
       }
     });
@@ -77,16 +79,16 @@ class App extends Component {
       <ArtistImage
         photo={image}
         key={image.id}
-        // quick ternay expression to see if photo is clicked already
+        // quick ternary expression to see if photo is clicked already
         onClick={image.clicked ? this.resetGame : this.handleOnClick}
       />
     )
 
     return (
       <div>
-        <Header 
-        score={this.state.score}
-        highScore={this.state.highScore}/>
+        <Header
+          score={this.state.score}
+          highScore={this.state.highScore} />
         <Instructions />
         <div className="container row">
           {newImageDataArray}
