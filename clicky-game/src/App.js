@@ -53,7 +53,7 @@ class App extends Component {
   }
 
   increaseHighScore = () => {
-    if (this.state.highScore < 12) {
+    if (this.state.highScore < 12 && this.state.highScore === this.state.score) {
       this.setState({
         highScore: this.state.highScore + 1
       });
