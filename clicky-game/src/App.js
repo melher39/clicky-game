@@ -16,9 +16,15 @@ class App extends Component {
     highScore: 0
   };
 
+  componentWillMount(){
+    // randomize the array of objects everytime the page is refreshed
+    // taken from w3 schools
+      imageData.sort(()=>0.5 - Math.random());
+  }
 
 
   handleOnClick = id => {
+    this.componentWillMount();
     this.increaseScore();
     this.increaseHighScore();
     this.setState(prevState => {
