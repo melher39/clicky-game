@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Header from "./components/Header.js";
 import Instructions from "./components/Instructions.js";
-// import MainContent from "./components/MainContent.js";
 import Footer from "./components/Footer.js";
 import ArtistImage from "./components/ArtistImage.js";
 import imageData from "./data/ImageData.js";
@@ -59,12 +58,24 @@ class App extends Component {
         highScore: this.state.highScore + 1
       });
     }
+    if(this.state.highScore === 11){
+      alert("You won!");
+      this.setState({
+        highScore: this.state.highScore + 1
+      });
+      this.resetGame();
+    }
+  }
+
+  incorrectGuess = () => {
+    
+    alert("Duplicate Selection! :(\nTry Again!");
+    this.resetGame();
+
   }
 
   resetGame = () => {
-    alert("Duplicate Selection! :(\nTry Again!");
     this.componentWillMount();
-
     this.setState(prevState => {
       const updatedImageData = prevState.imageData.map(photo => {
         // if (photo.id === id) {
@@ -90,7 +101,7 @@ class App extends Component {
         photo={image}
         key={image.id}
         // quick ternary expression to see if photo is clicked already
-        onClick={image.clicked ? this.resetGame : this.handleOnClick}
+        onClick={image.clicked ? this.incorrectGuess : this.handleOnClick}
       />
     )
 
