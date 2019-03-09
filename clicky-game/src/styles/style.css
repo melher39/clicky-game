@@ -9,3 +9,10 @@ img {
 nav {
     background-color: #d32f2f   ;
 }
+
+/* at the breakpoint of 600px... */
+@media screen and (max-width:600px){
+    nav .brand-logo {
+        font-size: 125%;
+    }
+}
