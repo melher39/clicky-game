@@ -16,6 +16,7 @@ class App extends Component {
     highScore: 0
   };
 
+  // this will run right before the page is fully loaded
   componentWillMount(){
     // randomize the array of objects everytime the page is refreshed
     // taken from w3 schools
@@ -61,6 +62,9 @@ class App extends Component {
   }
 
   resetGame = () => {
+    alert("Duplicate Selection! :(\nTry Again!");
+    this.componentWillMount();
+
     this.setState(prevState => {
       const updatedImageData = prevState.imageData.map(photo => {
         // if (photo.id === id) {
