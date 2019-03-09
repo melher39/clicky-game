@@ -47,7 +47,7 @@ const imageData = [
 },
 {
     id: 8, 
-    name: "Snoop Dogg",
+    name: "Snoop Doggy Dog",
     url: "https://img.maximummedia.ie/joe_co_uk/eyJkYXRhIjoie1widXJsXCI6XCJodHRwOlxcXC9cXFwvbWVkaWEtam9lY291ay5tYXhpbXVtbWVkaWEuaWUuczMuYW1hem9uYXdzLmNvbVxcXC93cC1jb250ZW50XFxcL3VwbG9hZHNcXFwvMjAxOFxcXC8xMVxcXC8yMjIxMTIxM1xcXC9HZXR0eUltYWdlcy0xNjA0NDcxLTEwMjR4Njk4LmpwZ1wiLFwid2lkdGhcIjo3NjcsXCJoZWlnaHRcIjo0MzEsXCJkZWZhdWx0XCI6XCJodHRwczpcXFwvXFxcL3d3dy5qb2UuY28udWtcXFwvYXNzZXRzXFxcL2ltYWdlc1xcXC9qb2Vjb3VrXFxcL25vLWltYWdlLnBuZz92PTIyXCIsXCJvcHRpb25zXCI6W119IiwiaGFzaCI6ImU0NjU2MGJhM2QwNmEwMjY2ZTdiYTMyZGJiYjhkNjQ2ODU5NDdiMWMifQ==/gettyimages-1604471-1024x698.jpg",
     clicked: false
 },
