@@ -1,4 +1,4 @@
-/* images are resposnive */
+/* images are responsive */
 img {
     max-width: 100%;
     height: 200px;
@@ -12,6 +12,7 @@ nav {
 
 /* at the breakpoint of 600px... */
 @media screen and (max-width:600px){
+    /* make the title just big enough so as to not overlap, but not too small either */
     nav .brand-logo {
         font-size: 125%;
     }

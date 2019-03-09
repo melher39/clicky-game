@@ -2,6 +2,8 @@ import React from "react";
 
 function Instructions(props) {
 
+    // if the high score of the game is 0, that must mean the game has not started (or the page was refreshed)
+    // in which case, then display the instructions for the game
     if (props.highScore === 0) {
         return (
             // simple instructions, may change delivery later
@@ -15,6 +17,7 @@ function Instructions(props) {
 
     }
 
+    // otherwise, if any score is recorded, then show the updated scores
     else {
         return (
             <div className="container center">

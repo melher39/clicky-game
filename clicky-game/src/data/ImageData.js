@@ -1,3 +1,4 @@
+// collection of Hip-Hop Artists (Legends)
 const imageData = [
 {
     id: 1, 
