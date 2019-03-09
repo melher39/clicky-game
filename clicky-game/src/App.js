@@ -17,10 +17,10 @@ class App extends Component {
   };
 
   // this will run right before the page is fully loaded
-  componentWillMount(){
+  componentWillMount() {
     // randomize the array of objects everytime the page is refreshed
     // taken from w3 schools
-      imageData.sort(()=>0.5 - Math.random());
+    imageData.sort(() => 0.5 - Math.random());
   }
 
 
@@ -99,7 +99,10 @@ class App extends Component {
         <Header
           score={this.state.score}
           highScore={this.state.highScore} />
-        <Instructions />
+        <Instructions
+          score={this.state.score}
+          highScore={this.state.highScore}
+        />
         <div className="container row">
           {newImageDataArray}
         </div>
